@@ -1,7 +1,10 @@
+package entities.runner;
+
+import entities.airport.Airport;
 import models.MilitaryType;
-import Planes.MilitaryPlane;
-import Planes.PassengerPlane;
-import Planes.Plane;
+import entities.planes.MilitaryPlane;
+import entities.planes.PassengerPlane;
+import entities.planes.Plane;
 
 import java.util.Arrays;
 import java.util.List;
@@ -27,7 +30,7 @@ public class Runner {
     public static void main(String[] args) {
         Airport airport = new Airport(planes);
         Airport militaryAirport = new Airport(airport.getMilitaryPlanes());
-        Airport passengerAirport = new Airport(airport.getPasPl());
+        Airport passengerAirport = new Airport(airport.getPassengerPlanes());
         System.out.println("Military airport sorted by max distance: " + militaryAirport
                 .sortByMaxDistance()
                 .toString());
